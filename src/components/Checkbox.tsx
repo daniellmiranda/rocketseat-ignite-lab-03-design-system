@@ -1,0 +1,19 @@
+import { twMerge } from 'tailwind-merge';
+import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
+import { Check } from 'phosphor-react';
+
+export interface CheckboxProps {
+  className?: string;
+}
+
+export function Checkbox({ className }: CheckboxProps) {
+  return (
+    <CheckboxPrimitive.Root
+      className={twMerge('w-6 h-6 p-[0.125rem] bg-gray-800 rounded', className)}
+    >
+      <CheckboxPrimitive.Indicator asChild>
+        <Check weight="bold" className="h-5 w-5 text-cyan-500" />
+      </CheckboxPrimitive.Indicator>
+    </CheckboxPrimitive.Root>
+  );
+}
