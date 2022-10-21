@@ -15,10 +15,10 @@ export function Text({ size = 'md', children, className, asChild }: TextProps) {
     <Component
       className={twMerge(
         'text-gray-100 font-sans',
-        className,
         size === 'sm' && 'text-sm',
         size === 'md' && 'text-md',
-        size === 'lg' && 'text-lg'
+        size === 'lg' && 'text-lg',
+        className
       )}
     >
       {children}

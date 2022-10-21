@@ -20,10 +20,10 @@ export function Heading({
     <Component
       className={twMerge(
         'text-gray-100 font-sans font-bold',
-        className,
         size === 'sm' && 'text-lg',
         size === 'md' && 'text-xl',
-        size === 'lg' && 'text-2xl'
+        size === 'lg' && 'text-2xl',
+        className
       )}
     >
       {children}
